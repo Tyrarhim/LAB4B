@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book</title>
+</head>
+<body>
+    <script>
+        const bookData = {
+            "Book": [
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publication Year": 1925,
+                    "genres": ["Fiction", "Classics"]
+                },
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publication Year": 1960,
+                    "genres": ["Fiction", "Coming-of-Age"]
+                }
+            ]
+        };
+
+        console.log("The title of the first book: " + bookData.Book[0].title);
+        console.log("The author of the second book: " + bookData.Book[1].author);
+        console.log("The genres of all books:");
+
+        // Collect all genres into one array
+        const allGenres = bookData.Book.flatMap(book => book.genres);
+        
+        // Join them into a single string
+        console.log(allGenres.join(", "));
+    </script>
+</body>
+</html>
